@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: normal 25pt Arial;
+            text-align: center;
+        }
+
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+       var n1 = Number.parseInt(window.prompt('Digite um número: ')) //string
+       var n2 = Number.parseInt(window.prompt('Digite outro número: ')) //string
+       var s = n1 + n2 // prompt devolve o numero como string e não entende que as variaveis são numeros, para fazer com que ela leia numeros, precisamos converter de string pra number. Usando o Number.parseInt(n) mudamos para número inteiro e Number.parseFloat(n) converse para número Real. Tambem podemos usar apenas o Number, mas caso quisermos que seja algo especifico usamos o Int e o Float.
+       window.alert('A soma dos valores é: ' + String(s)) //Quando precisarmos converter pra string basta adicionar o string()
+
+       window.alert(`A soma dos valores é: ${s}`) // Podemos usar tambem o place holder com `` e ${} que é uma forma muito mais simples de concatenar.
+    </script>
+</body>
+</html>
