@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: darkblue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo usar o <strong>DOM</strong> em JavaScript.</p>
+    <div>Clique em mim</div>
+    
+    <script>
+        var corpo = window.document.body // a variável corpo recebe body
+        var p1 = window.document.getElementsByTagName('p')[0] // getElementsByTagName, nos permite editar um elemento alvo que no cas foi o primeiro paragrafo ('p') do body [0] o numero zero representa o primeiro da página, 1, 2, 3, 4 são os próximos sucessivamente. 
+        corpo.style.background = "black" // Mudamos a cor do background para black
+        window.document.write('Está escrito assim: ' + p1.innerText) // com a tag write, nós mandamos escrever e innerText escreve exatamente oque está escrito dentro da var p1 que no caso seria o primeiro paragrafo ('p') [0]
+        p1.style.color = 'orange' // podemos mudar a cor tambem
+
+        /* innerText pega apenas o texto já o innerHTML pega o texto e as tags filhas, como strong.*/
+
+        // Aprendendo sobre getElementsByTagName
+    </script>
+</body>
+</html>
