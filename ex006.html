@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos DOM</title>
+    <title>Eventos DOM (sem addEventListener)</title>
     <style>
         div#area {
-            font: normal 20pt Arial;
+            font: normal 20pt Arial; 
             background: green;
             color: white;
             width: 200px;
@@ -17,8 +17,28 @@
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onclick="clicar()" onmouseenter='entrar()' onmouseout='sair()'> <!--Adicionando o evento onclick, fazemos com que ao clicar na DIV um evento ocorra -->
         Interaja...
     </div>
+
+    <script>
+        function clicar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Clicou!'
+            a.style.background = 'blue' //muda a cor ao click
+        } //Chamamos a function pra fazermos a ligação com a div e o evento clicar, colocar na variavel a usando o DOM ById para ligar o Id alvo e mudamos o text ao clicar com o a.innerText = 'Clicou!' ao clicar a palavra Clicou! vai aparecer. 
+
+        function entrar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Passou o Mouse!'
+            a.style.background= 'green'
+        }// Acionei outro evento para que quando o mouse for passado o texto mude para "Passou o mouse"
+
+        function sair() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Você saiu!'
+            a.style.background = 'red'
+        }//Aidicionei evento para que a mensagem Você saiu apareça quando o mouse for tirado de cima da div
+    </script>
 </body>
 </html>
