@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    Se você vive no <input type="text" id="txt1" class="txt1">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var txt = window.document.querySelector('input#txt1')
+            var res = window.document.querySelector('div#res')
+            var país = (txt.value)
+
+            if (país == 'Brasil') {
+                res.innerHTML = `<p>Você é <strong>Brasileiro(a)</strong></p>`
+            } else {
+                res.innerHTML = `<p>Você é um <strong>Estrangeiro(a)</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
