@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Modelo de Exercicio</title>
+    <title>Verificador de idade</title>
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificador de Idade</h1>
     </header>
     <section>
         <div>
-            Testando ...
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0"> <!--Caixa de Número-->
+            </p>
+            <p>
+                Sexo:
+                <input type="radio" name="radsex" id="mas" checked><!--Botão para Selecão-->
+                <label for="masc">Masculino</label> <!--Caixa de Texto-->
+                <input type="radio" name="radsex" id="fem"><!--Botão para Seleção, perceba que temos dois type="radio" com o mesmo name="radsex" é necessario que os dois sejam iguais, para quando for selecionado uma bolinha a outra não ser preenchida tambem-->
+                <label for="fem">Feminino</label> <!--Caixa de Texto-->
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()"> <!--Botão Verificar // onclick, evento para o javascript-->
+            </p>
         </div>
-        <div>
-            Olá...
+        <div id="res">
+            <p><strong>Preencha os dados acima para ver o resultado!</strong></p>
         </div>
+
     </section>
     <footer>
         <p>&copy; CursoemVideo</p>
