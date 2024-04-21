@@ -10,10 +10,10 @@ function verificar () {
         var idade =  ano - Number(fano.value) //Para calcular a idade, precisamos do ano atual - o valor digitado no (fano.value)
         var genero = ''
         var img = document.createElement('img')
-        img.setAttribute('id','foto')
+        img.setAttribute('id', 'foto')
         if (fsex[0].checked) { //dependendo do checked irá preencher a variavel genero
             genero = 'Homem'
-            if (idade >= 0 && idade < 10) {
+            if (idade >=0 && idade < 10) {
                 //criança
                 img.setAttribute('src','foto-menino.png')
             } else if (idade < 21) {
@@ -30,15 +30,20 @@ function verificar () {
             genero = 'Mulher'
             if (idade >= 0 && idade < 10) {
                 //criança
+                img.setAttribute('src','foto-menina.png')
             } else if (idade < 21) {
                 //jovem
+                img.setAttribute('src','foto-jovem-f.png')
             } else if (idade < 50) {
                 //adulto
-            } else (idade > 50) {
+                img.setAttribute('src','foto-mulher.png')
+            } else {
                 //idoso
+                img.setAttribute('src','foto-idosa.png')
             }
         }
         res.style.textAlign = 'center' // usa CSS com Javascript
         res.innerHTML = `Você é ${genero} e tem ${idade} anos!`
+        res.appendChild(img)
     }
 }

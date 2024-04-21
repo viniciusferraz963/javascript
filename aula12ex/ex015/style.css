@@ -3,6 +3,10 @@ body {
     font: normal 15pt Arial;
 }
 
+img {
+    padding: 25px;
+}
+
 header {
     color: white;
     text-align: center;
